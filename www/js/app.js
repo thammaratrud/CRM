@@ -39,6 +39,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
       url: '/templates/map',
       templateUrl: 'templates/map.html'
 
+
     })
 
     .state('activities', {
@@ -103,6 +104,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
     .state('cases', {
       url: '/templates/cases/cases',
       templateUrl: 'templates/cases/cases.html'
+
+    })
+     .state('casesList', {
+      url: '/templates/cases/casesList.html',
+      templateUrl: 'templates/cases/casesList.html'
 
     })
     .state('callimport', {
