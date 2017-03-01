@@ -5,7 +5,7 @@
         </div>
         <h1 class="title">Accounts</h1>
         <div class="buttons">
-            <a button class="button" ng-click="saveAccounts()">Save</button></a>
+            <a button class="button" ng-click="saveAccounts(data)">Save</button></a>
         </div>
 
 
@@ -13,51 +13,48 @@
     <ion-content>
 
     </ion-content>
-    <ion-tabs class=" tabs-icon-only">
+    <ion-tabs class=" tabs-icon-only" >
         <ion-tab title="Info" icon-on="icon-font-color ion-ios-home-outline" icon-off="ion-ios-home-outline">
             <!-- Tab 1 content -->
   
             <br>
-            <div class="row">
+            <div class="row" >
                 <div class="col col-10">
                 </div>
 
                 <div class="col col-10">
                 </div>
             </div>
-
-            <div class="list ">
+            
+            <div class="list "style="background-color: #f5f5f5;">
 
                 <a class="item item-input " style="color: red;">
-                    <b>Account Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data."  required>
+                    <b>Account Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.name"  required>
                 </a>
                  <a class="item item-input">
-                    <b>E-mail</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.">
+                    <b>E-mail</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.email">
                 </a>
              
-                <div class="item item-divider">
-                </div>
+               <br>
                 <a class="item item-input">
-                    <b>Main Phone</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.">
+                    <b>Main Phone</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.mainphone">
                 </a>
                 <a class="item item-input">
-                    <b>Fax</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.">
+                    <b>Fax</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.fax">
                 </a>
-                <div class="item item-divider ">
-                </div>
+              <br>
 
                 <a class="item item-input">
-                    <b>Web Site</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.">
+                    <b>Web Site</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.website">
                 </a>
 
-                <div class="item item-divider">
-                </div>
+              <br>
 
                 <!--<a class="item item-input">
                     <b>Currency</b>&nbsp&nbsp&nbsp<input type="text">
                 </a>-->
                 <label class="item item-input item-select">
-    <div class="input-label" ng-model="data.">
+    <div class="input-label" ng-model="currency">
       <b>Currency</b>
     </div>
     <select>
@@ -67,7 +64,7 @@
     </select>
   </label>
                 <label class="item item-input item-select">
-    <div class="input-label" ng-model"data.">
+    <div class="input-label" ng-model"data.pricelist">
       <b>Price List</b>
     </div>
     <select>
@@ -77,8 +74,7 @@
      
     </select>
   </label>
-                <div class="item item-divider">
-                </div>
+               
             </div>
 
 
@@ -94,50 +90,41 @@
                 </div>
             </div>
 
-            <div class="list">
+            <div class="list"style="background-color: #f5f5f5;">
 
 
-                <a class="item item-input">
-                    <b>Street 1</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.">
+                <a class="item item-input ">
+                    <b>Street 1</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.street1">
                 </a>
 
 
 
 
                 <a class="item item-input">
-                    <b>Street 2</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.">
+                    <b>Street 2</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.street2">
                 </a>
 
                 <a class="item item-input">
-                    <b>Street 3</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.">
+                    <b>Street 3</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.street3">
                 </a>
-                <div class="item item-divider">
-                </div>
+               <br>
 
 
                 <a class="item item-input">
-                    <b>City</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.">
-                </a>
-
-
-                <a class="item item-input">
-                    <b>Postal Code</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.">
-                </a>
-
-                <div class="item item-divider">
-                </div>
-
-                <a class="item item-input">
-                    <b>State</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.">
+                    <b>City</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.city">
                 </a>
 
 
                 <a class="item item-input">
-                    <b>Country</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.">
+                    <b>Postal Code</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.postcode">
                 </a>
-
-                <div class="item item-divider">
-                </div>
+<br>
+                <a class="item item-input">
+                    <b>State</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.State">
+                </a>
+                <a class="item item-input">
+                    <b>Country</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.country">
+                </a>
             </div>
         </ion-tab>
     </ion-tabs>

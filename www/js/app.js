@@ -22,7 +22,13 @@ myApp.run(function ($ionicPlatform) {
     }
   });
 })
-myApp.config(function ($stateProvider, $urlRouterProvider) {
+  .constant('config', {
+    serviceBase: 'https://cybercrm.herokuapp.com/'
+    //https://thamapp.herokuapp.com/      for production
+    //https://thamapptest.herokuapp.com/  for heroku test
+    //http://localhost:3000/              for local
+  })
+myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $stateProvider
     .state('home', {
       url: '/templates/home',
@@ -39,6 +45,30 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
       url: '/templates/map',
       templateUrl: 'templates/map.html'
 
+
+    })
+
+      .state('homeLogin', {
+      url: '/templates/auth/homeLogin',
+      templateUrl: 'templates/auth/homeLogin.html'
+
+    })
+      .state('login', {
+      url: '/templates/auth/login',
+      templateUrl: 'templates/auth/login.html',
+       controller: 'register'
+
+    })
+     .state('register-contactInfo', {
+      url: '/templates/auth/register-contactInfo',
+      templateUrl: 'templates/auth/register-contactInfo.html',
+       controller: 'register'
+
+    })
+     .state('register-loginInfo', {
+      url: '/templates/auth/register-loginInfogister-contactInfo',
+      templateUrl: 'templates/auth/register-loginInfo.html',
+       controller: 'register'
 
     })
 
@@ -71,9 +101,21 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/contacts/contacts.html'
 
     })
+    .state('contactsForm', {
+      url: '/templates/contacts/contactsForm.html',
+      templateUrl: 'templates/contacts/contactsForm.html'
+
+    })
+
     .state('leads', {
       url: '/templates/leads/leads',
       templateUrl: 'templates/leads/leads.html'
+
+    })
+
+    .state('leadsForm', {
+      url: '/templates/leads/leadsForm',
+      templateUrl: 'templates/leads/leadsForm.html'
 
     })
     .state('opportunities', {
@@ -106,7 +148,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
       templateUrl: 'templates/cases/cases.html'
 
     })
-     .state('casesList', {
+    .state('casesList', {
       url: '/templates/cases/casesList.html',
       templateUrl: 'templates/cases/casesList.html'
 
@@ -143,5 +185,6 @@ myApp.config(function ($stateProvider, $urlRouterProvider) {
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/templates/home');
-  var serviceBase = 'https://thammastamp.herokuapp.com';
+  $ionicConfigProvider.tabs.position('bottom');
+  $ionicConfigProvider.tabs.style('standard');
 });

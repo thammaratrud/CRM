@@ -1,0 +1,131 @@
+<ion-pane>
+    <ion-header-bar align-title="left" class="bar-positive">
+        <div class="buttons">
+            <a button class="button" href="#/templates/home">Back</button></a>
+        </div>
+        <h1 class="title">Accounts</h1>
+        <div class="buttons">
+            <a button class="button" ng-click="saveAccounts()">Save</button></a>
+        </div>
+
+
+    </ion-header-bar>
+    <ion-content>
+
+    </ion-content>
+    <ion-tabs class=" tabs-icon-only" >
+        <ion-tab title="Info" icon-on="icon-font-color ion-ios-home-outline" icon-off="ion-ios-home-outline">
+            <!-- Tab 1 content -->
+  
+            <br>
+            <div class="row" >
+                <div class="col col-10">
+                </div>
+
+                <div class="col col-10">
+                </div>
+            </div>
+            
+            <div class="list "style="background-color: #f5f5f5;">
+
+                <a class="item item-input " style="color: red;">
+                    <b>Account Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.name"  required>
+                </a>
+                 <a class="item item-input">
+                    <b>E-mail</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.email">
+                </a>
+             
+               <br>
+                <a class="item item-input">
+                    <b>Main Phone</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.mainphone">
+                </a>
+                <a class="item item-input">
+                    <b>Fax</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.fax">
+                </a>
+              <br>
+
+                <a class="item item-input">
+                    <b>Web Site</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.website">
+                </a>
+
+              <br>
+
+                <!--<a class="item item-input">
+                    <b>Currency</b>&nbsp&nbsp&nbsp<input type="text">
+                </a>-->
+                <label class="item item-input item-select">
+    <div class="input-label" ng-model="currency">
+      <b>Currency</b>
+    </div>
+    <select>
+      <option value="" selected>Baht</option>
+      <option value="">US Dollar</option>
+      <option value="">Dollar</option>
+    </select>
+  </label>
+                <label class="item item-input item-select">
+    <div class="input-label" ng-model"data.pricelist">
+      <b>Price List</b>
+    </div>
+    <select>
+         <option value="" selected></option>
+      <option value="">Retail</option>
+      <option value="">Wholesale</option>
+     
+    </select>
+  </label>
+               
+            </div>
+
+
+        </ion-tab>
+        <ion-tab title="Address" icon-on="icon-font-color ion-ios-location-outline" icon-off="ion-ios-location-outline">Address
+            <!-- Tab 2 content -->
+            <br>
+            <div class="row">
+                <div class="col col-10">
+                </div>
+
+                <div class="col col-10">
+                </div>
+            </div>
+
+            <div class="list"style="background-color: #f5f5f5;">
+
+
+                <a class="item item-input ">
+                    <b>Street 1</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.street1">
+                </a>
+
+
+
+
+                <a class="item item-input">
+                    <b>Street 2</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.street2">
+                </a>
+
+                <a class="item item-input">
+                    <b>Street 3</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.street3">
+                </a>
+               <br>
+
+
+                <a class="item item-input">
+                    <b>City</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.city">
+                </a>
+
+
+                <a class="item item-input">
+                    <b>Postal Code</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.postcode">
+                </a>
+<br>
+                <a class="item item-input">
+                    <b>State</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.State">
+                </a>
+                <a class="item item-input">
+                    <b>Country</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data.country">
+                </a>
+            </div>
+        </ion-tab>
+    </ion-tabs>
+</ion-pane>
