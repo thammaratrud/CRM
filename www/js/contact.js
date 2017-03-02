@@ -1,41 +1,33 @@
 // 'use strict';
-// myApp.controller('contactCtrl', ['$scope', '$cordovaContacts', ' $ionicPlatform',
-//     function ($scope, $cordovaContacts, $ionicPlatform) {
-//         $scope.addContact = function () {
-//             $cordovaContacts.save($scope.contactForm).then(function (result) {
-//                 // Contact saved
-//             }, function (err) {
-//                 // Contact error
-//             });
-//         };
+// myApp.controller('accountsController', ['$scope', '$http', 'config', 'localStorageService',
+//     function ($scope, $http, config, localStorageService) {
+//         var serviceBase = config.serviceBase;
+//         $scope.data = {};
+//         var user = localStorageService.get('authorizationData');
 
-//         $scope.getAllContacts = function () {
-//             $cordovaContacts.find().then(function (allContacts) { //omitting parameter to .find() causes all contacts to be returned
-//                 $scope.contacts = allContacts;
+
+
+//         $scope.saveAccounts = function (data) {
+//             alert(JSON.stringify(data))
+//             if (!$scope.accountsData) {
+//                 $http.post(serviceBase + 'api/accounts', data).success(function (response) {
+//                     $scope.accountsData = response;
+//                     console.log(JSON.stringify($scope.accountsData));
+//                     alert("Save complete")
+//                 }).error(function (err) {
+//                     // alert();
+//                     alert('save failed : ' + JSON.stringify(err));
+//                 })
+//             } else {
+//                 $http.put(serviceBase + 'api/accounts/' + $scope.accountsData._id, data).success(function (response) {
+//                     $scope.accountsData = response;
+//                     console.log(JSON.stringify($scope.accountsData));
+//                     alert("Save complete")
+//                 }).error(function (err) {
+//                     // alert();
+//                     alert('save failed : ' + JSON.stringify(err));
+//                 })
 //             }
-//   };
 
-//         $scope.findContactsBySearchTerm = function (searchTerm) {
-//             var opts = {                                           //search options
-//                 filter: searchTerm,                                 // 'Bob'
-//                 multiple: true,                                      // Yes, return any contact that matches criteria
-//                 fields: ['displayName', 'name']                   // These are the fields to search for 'bob'.
-//       desiredFields: [id];    //return fields.
-//             };
-
-//             if ($ionicPlatform.isAndroid()) {
-//                 opts.hasPhoneNumber = true;         //hasPhoneNumber only works for android.
-//             };
-
-//             $cordovaContacts.find(opts).then(function (contactsFound) {
-//                 $scope.contacts = contactsFound;
-//             };
 //         }
-
-//         $scope.pickContactUsingNativeUI = function () {
-//             $cordovaContacts.pickContact().then(function (contactPicked) {
-//                 $scope.contact = contactPicked;
-//             }
-//   }
-
-//     }]);
+//     }])

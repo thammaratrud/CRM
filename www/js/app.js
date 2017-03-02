@@ -109,13 +109,15 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
 
     .state('leads', {
       url: '/templates/leads/leads',
-      templateUrl: 'templates/leads/leads.html'
+      templateUrl: 'templates/leads/leads.html',
+      controller: 'leadsController'
 
     })
 
     .state('leadsForm', {
       url: '/templates/leads/leadsForm',
-      templateUrl: 'templates/leads/leadsForm.html'
+      templateUrl: 'templates/leads/leadsForm.html',
+      controller: 'leadsController'
 
     })
     .state('opportunities', {
