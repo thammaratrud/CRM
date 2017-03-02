@@ -5,7 +5,7 @@
         </div>
         <h1 class="title">Accounts</h1>
         <div class="buttons">
-            <a button class="button" ng-click="saveAccounts()">Save</button></a>
+            <a button class="button" ng-click="saveAccounts(data)">Save</button></a>
         </div>
 
 
@@ -54,23 +54,23 @@
                     <b>Currency</b>&nbsp&nbsp&nbsp<input type="text">
                 </a>-->
                 <label class="item item-input item-select">
-    <div class="input-label" ng-model="currency">
+    <div class="input-label" ng-model="data.currency">
       <b>Currency</b>
     </div>
     <select>
-      <option value="" selected>Baht</option>
-      <option value="">US Dollar</option>
-      <option value="">Dollar</option>
+      <option value="1" selected>Baht</option>
+      <option value="2">US Dollar</option>
+      <option value="3">Dollar</option>
     </select>
   </label>
                 <label class="item item-input item-select">
-    <div class="input-label" ng-model"data.pricelist">
+    <div class="input-label">
       <b>Price List</b>
     </div>
-    <select>
+    <select ng-model"data.pricelist">
          <option value="" selected></option>
-      <option value="">Retail</option>
-      <option value="">Wholesale</option>
+      <option value="1">Retail</option>
+      <option value="2">Wholesale</option>
      
     </select>
   </label>

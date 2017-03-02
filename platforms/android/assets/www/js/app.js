@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var myApp = angular.module('starter', ['ionic'])
+var myApp = angular.module('starter', ['ionic', 'LocalStorageModule', 'ngCordova'])
 
 myApp.run(function ($ionicPlatform) {
   $ionicPlatform.ready(function () {
@@ -22,6 +22,12 @@ myApp.run(function ($ionicPlatform) {
     }
   });
 })
+  .constant('config', {
+    serviceBase: 'https://cybercrm.herokuapp.com/'
+    //https://thamapp.herokuapp.com/      for production
+    //https://thamapptest.herokuapp.com/  for heroku test
+    //http://localhost:3000/              for local
+  })
 myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $stateProvider
     .state('home', {
@@ -39,6 +45,30 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
       url: '/templates/map',
       templateUrl: 'templates/map.html'
 
+
+    })
+
+    .state('homeLogin', {
+      url: '/templates/auth/homeLogin',
+      templateUrl: 'templates/auth/homeLogin.html'
+
+    })
+    .state('login', {
+      url: '/templates/auth/login',
+      templateUrl: 'templates/auth/login.html',
+      controller: 'register'
+
+    })
+    .state('register-contactInfo', {
+      url: '/templates/auth/register-contactInfo',
+      templateUrl: 'templates/auth/register-contactInfo.html',
+      controller: 'register'
+
+    })
+    .state('register-loginInfo', {
+      url: '/templates/auth/register-loginInfogister-contactInfo',
+      templateUrl: 'templates/auth/register-loginInfo.html',
+      controller: 'register'
 
     })
 
@@ -158,4 +188,3 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
   $ionicConfigProvider.tabs.position('bottom');
   $ionicConfigProvider.tabs.style('standard');
 });
-var serviceBase = 'https://cybercrm.herokuapp.com';
