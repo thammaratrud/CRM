@@ -6,9 +6,9 @@
         <h1 class="title">Contacts</h1>
         <div class="buttons button-clear" >
 
-            <h1><a button class="button button-clear"><i></i>save</button></a></h1>
+            <h1><a button class="button button-clear" ng-click="savecontacts()"><i></i>save</button></a></h1>
             &nbsp &nbsp &nbsp
-            <a button class="button button-clear"><i class="ion-camera"></i></button></a>
+            <a button class="button button-clear" ng-hide="true"><i class="ion-camera"></i></button></a>
             <!--<a button class="button button-clear" ng-if="status === '2'"><i class="ion-camera22"></i></button></a>-->
         </div>
     </ion-header-bar>
@@ -30,7 +30,7 @@
             <div class="list " style="background-color: #f5f5f5;">
 
 <label class="item item-input item-select">
-    <div class="input-label" ng-model"data">
+    <div class="input-label" ng-model"datacontacts.customer">
       <b>Customer</b>
     </div>
     <select>
@@ -41,31 +41,31 @@
   </label>
 <br>
 <a class="item item-input" style="color: red;">
-<b>Last Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data">
+<b>Last Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.lastname">
 </a>
 
 <a class="item item-input">
-    <b>First Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data">
+    <b>First Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.firstname">
 </a>
 <br>
 <a class="item item-input">
-    <b>Mobile Phone</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data">
+    <b>Mobile Phone</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.mobilephone">
 </a>
 
 
 <a class="item item-input">
-    <b>Business Phone</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data">
+    <b>Business Phone</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.businessphone">
 </a>
 
 <br>
 
 
 <a class="item item-input">
-    <b>E-mail</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data">
+    <b>E-mail</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.email">
 </a>
 
 <a class="item item-input">
-    <b>Fax</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data">
+    <b>Fax</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.fax">
 </a>
 
 </div>
@@ -87,36 +87,36 @@
 
 
 <a class="item item-input ">
-    <b>Street 1</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data">
+    <b>Street 1</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.street1">
 </a>
 
 
 
 
 <a class="item item-input">
-    <b>Street 2</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data">
+    <b>Street 2</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.street2">
 </a>
 
 <a class="item item-input">
-    <b>Street 3</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data">
-</a>
-<br>
-
-
-<a class="item item-input">
-    <b>City</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data">
-</a>
-
-
-<a class="item item-input">
-    <b>Postal Code</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data">
+    <b>Street 3</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.street3">
 </a>
 <br>
+
+
 <a class="item item-input">
-    <b>State</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data">
+    <b>City</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.city">
+</a>
+
+
+<a class="item item-input">
+    <b>Postal Code</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.postcode">
+</a>
+<br>
+<a class="item item-input">
+    <b>State</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.State">
 </a>
 <a class="item item-input">
-    <b>Country</b>&nbsp&nbsp&nbsp<input type="text" ng-model="data">
+    <b>Country</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.country">
 </a>
 </div>
 </ion-tab>

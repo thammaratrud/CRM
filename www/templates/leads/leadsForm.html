@@ -5,13 +5,9 @@
         </div>
         <h1 class="title">Lead</h1>
         <div class="buttons">
-
-            <a button class="button" ng-click="saveAccounts()">Save</button></a> &nbsp &nbsp &nbsp
+            <a button class="button" ng-click="saveLeads()">Save</button></a> &nbsp &nbsp &nbsp
             <a button class="button button-clear" href="#/templates/leads/leadsForm"><i class="ionicons ion-ios-camera-outline"></i></button> </a>
-
         </div>
-
-
     </ion-header-bar>
     <ion-content>
 
@@ -36,48 +32,57 @@
 </a>
 <br>
 <a class="item item-input" style="color: red;">
-<b>Company Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.">
+<b>Company Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.companyname" required>
 </a>
 
 <a class="item item-input" style="color: red;">
-<b>Last Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.">
+<b>Last Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.lastname" required>
 </a>
 <a class="item item-input">
-    <b>First Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.">
+    <b>First Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.firstName">
 </a>
 <br>
 
 <a class="item item-input">
-    <b>E-mail</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.">
+    <b>E-mail</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.email">
 </a>
 <a class="item item-input">
-    <b>Mobile Phone</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.">
+    <b>Mobile Phone</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.mobilephone">
 </a>
 <a class="item item-input">
-    <b>Business Phone</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.">
+    <b>Business Phone</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.businessphone">
 </a>
 <br>
-<label class="item item-input item-select">
-    <div class="input-label" ng-model="dataLeads.">
+<!--<label class="item item-input item-select">
+    <div class="input-label">
       <b>Est.Close Date</b>
     </div>
-    <select>
+    <select  ng-model="dataLeads.estvalue">
       <option value="" selected></option>
      
     </select>
-  </label>
+  </label>-->
+<a class="item item-input">
+    <b>Est. Value</b>&nbsp&nbsp&nbsp<input type="number" ng-model="dataLeads.estvalue">
+</a>
+<label class="item item-input">
+  <span class="input-label"><b>Est.Close Date</b></span>
+  <input type="date" ng-model="dataLeads.estclosedate">
+</label>
+
+
 <label class="item item-input item-select">
-    <div class="input-label" ng-model="dataLeads.">
+    <div class="input-label" >
       <b>Rating</b>
     </div>
-    <select>
-      <option value="" selected></option>
-      
+    <select ng-model="dataLeads.rating">
+      <option value="Hot" selected>Hot</option>
+       <option value="Warm" >Warm</option>
+        <option value="Cold" >Cold</option>
     </select>
   </label>
 <br>
 </div>
-
 
 </ion-tab>
 <ion-tab title="Address" icon-on="icon-font-color ion-ios-location-outline" icon-off="ion-ios-location-outline">Address
@@ -95,36 +100,36 @@
 
 
 <a class="item item-input ">
-    <b>Street 1</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.">
+    <b>Street 1</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.street1">
 </a>
 
 
 
 
 <a class="item item-input">
-    <b>Street 2</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.">
+    <b>Street 2</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.street2">
 </a>
 
 <a class="item item-input">
-    <b>Street 3</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.">
-</a>
-<br>
-
-
-<a class="item item-input">
-    <b>City</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.">
-</a>
-
-
-<a class="item item-input">
-    <b>Postal Code</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.">
+    <b>Street 3</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.street3">
 </a>
 <br>
+
+
 <a class="item item-input">
-    <b>State</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.">
+    <b>City</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.city">
+</a>
+
+
+<a class="item item-input">
+    <b>Postal Code</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.postcode">
+</a>
+<br>
+<a class="item item-input">
+    <b>State</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.State">
 </a>
 <a class="item item-input">
-    <b>Country</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.">
+    <b>Country</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataLeads.country">
 </a>
 </div>
 </ion-tab>

@@ -98,24 +98,28 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
 
     .state('contacts', {
       url: '/templates/contacts/contacts',
-      templateUrl: 'templates/contacts/contacts.html'
+      templateUrl: 'templates/contacts/contacts.html',
+         controller: 'contactsController'
 
     })
     .state('contactsForm', {
       url: '/templates/contacts/contactsForm.html',
-      templateUrl: 'templates/contacts/contactsForm.html'
+      templateUrl: 'templates/contacts/contactsForm.html',
+         controller: 'contactsController'
 
     })
 
     .state('leads', {
       url: '/templates/leads/leads',
-      templateUrl: 'templates/leads/leads.html'
+      templateUrl: 'templates/leads/leads.html',
+      controller: 'leadsController'
 
     })
 
     .state('leadsForm', {
       url: '/templates/leads/leadsForm',
-      templateUrl: 'templates/leads/leadsForm.html'
+      templateUrl: 'templates/leads/leadsForm.html',
+      controller: 'leadsController'
 
     })
     .state('opportunities', {

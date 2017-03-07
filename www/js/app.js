@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var myApp = angular.module('starter', ['ionic', 'LocalStorageModule', 'ngCordova'])
+var myApp = angular.module('starter', ['ionic', 'LocalStorageModule', 'ngCordova','chart.js'])
 
 myApp.run(function ($ionicPlatform) {
   $ionicPlatform.ready(function () {
@@ -28,7 +28,7 @@ myApp.run(function ($ionicPlatform) {
     //https://thamapptest.herokuapp.com/  for heroku test
     //http://localhost:3000/              for local
   })
-myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider,ChartJsProvider) {
   $stateProvider
     .state('home', {
       url: '/templates/home',
@@ -37,13 +37,15 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
     })
     .state('dash', {
       url: '/templates/dash',
-      templateUrl: 'templates/dash.html'
+      templateUrl: 'templates/dash.html',
+      controller: 'dashController'
 
     })
 
     .state('map', {
       url: '/templates/map',
-      templateUrl: 'templates/map.html'
+      templateUrl: 'templates/map.html',
+      //  controller: 'mapController'
 
 
     })
@@ -98,12 +100,14 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
 
     .state('contacts', {
       url: '/templates/contacts/contacts',
-      templateUrl: 'templates/contacts/contacts.html'
+      templateUrl: 'templates/contacts/contacts.html',
+      controller: 'contactsController'
 
     })
     .state('contactsForm', {
       url: '/templates/contacts/contactsForm.html',
-      templateUrl: 'templates/contacts/contactsForm.html'
+      templateUrl: 'templates/contacts/contactsForm.html',
+      controller: 'contactsController'
 
     })
 
