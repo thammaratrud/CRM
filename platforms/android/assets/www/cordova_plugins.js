@@ -1,6 +1,19 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
+        "id": "com.ubookr.plugins.calllog.CallLog",
+        "file": "plugins/com.ubookr.plugins.calllog/www/CallLog.js",
+        "pluginId": "com.ubookr.plugins.calllog",
+        "clobbers": [
+            "window.plugins.calllog"
+        ]
+    },
+    {
+        "id": "com.ubookr.plugins.calllog.tests",
+        "file": "plugins/com.ubookr.plugins.calllog/test/tests.js",
+        "pluginId": "com.ubookr.plugins.calllog"
+    },
+    {
         "id": "cordova-plugin-contacts.contacts",
         "file": "plugins/cordova-plugin-contacts/www/contacts.js",
         "pluginId": "cordova-plugin-contacts",
@@ -128,8 +141,9 @@ module.exports = [
 module.exports.metadata = 
 // TOP OF METADATA
 {
-    "cordova-plugin-console": "1.0.5",
+    "com.ubookr.plugins.calllog": "2.0",
     "cordova-plugin-compat": "1.1.0",
+    "cordova-plugin-console": "1.0.5",
     "cordova-plugin-contacts": "2.2.1",
     "cordova-plugin-device": "1.1.4",
     "cordova-plugin-geolocation": "2.4.1",
