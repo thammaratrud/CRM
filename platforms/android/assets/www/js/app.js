@@ -140,6 +140,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider,
       templateUrl: 'templates/quotes/quotes.html'
 
     })
+    .state('quotesForm', {
+      url: '/templates/quotes/quotes',
+      templateUrl: 'templates/quotes/quotesForm.html'
+
+    })
     .state('orders', {
       url: '/templates/orders/orders',
       templateUrl: 'templates/orders/orders.html'

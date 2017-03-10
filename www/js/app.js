@@ -46,7 +46,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider,
     .state('map', {
       url: '/templates/map',
       templateUrl: 'templates/map.html',
-       controller: 'mapController'
+      controller: 'mapController'
 
 
     })
@@ -137,12 +137,26 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider,
     })
     .state('quotes', {
       url: '/templates/quotes/quotes',
-      templateUrl: 'templates/quotes/quotes.html'
+      templateUrl: 'templates/quotes/quotes.html',
+      controller: 'quotesController'
+
+    })
+    .state('quotesForm', {
+      url: '/templates/quotes/quotesForm',
+      templateUrl: 'templates/quotes/quotesForm.html',
+      controller: 'quotesController'
 
     })
     .state('orders', {
       url: '/templates/orders/orders',
-      templateUrl: 'templates/orders/orders.html'
+      templateUrl: 'templates/orders/orders.html',
+      controller: 'ordersController'
+
+    })
+    .state('ordersForm', {
+      url: '/templates/orders/ordersForm',
+      templateUrl: 'templates/orders/ordersForm.html',
+      controller: 'ordersController'
 
     })
     .state('invoices', {
