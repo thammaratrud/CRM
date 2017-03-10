@@ -22,6 +22,7 @@ myApp.run(function ($ionicPlatform) {
     }
   });
 })
+
   .constant('config', {
     serviceBase: 'https://cybercrm.herokuapp.com/'
     //https://thamapp.herokuapp.com/      for production
@@ -43,7 +44,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
 
     .state('map', {
       url: '/templates/map',
-      templateUrl: 'templates/map.html'
+      templateUrl: 'templates/map.html',
+       controller: 'mapController'
 
 
     })
@@ -82,6 +84,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
       templateUrl: 'templates/calendar/calendar.html'
 
     })
+    .state('calendar-info', {
+      url: '/templates/calendar/calendar-info',
+      templateUrl: 'templates/calendar/calendar-info.html'
+
+    })
     .state('accounts', {
       url: '/templates/accounts/accounts',
       templateUrl: 'templates/accounts/accounts.html',
@@ -99,13 +106,13 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
     .state('contacts', {
       url: '/templates/contacts/contacts',
       templateUrl: 'templates/contacts/contacts.html',
-         controller: 'contactsController'
+      controller: 'contactsController'
 
     })
     .state('contactsForm', {
       url: '/templates/contacts/contactsForm.html',
       templateUrl: 'templates/contacts/contactsForm.html',
-         controller: 'contactsController'
+      controller: 'contactsController'
 
     })
 

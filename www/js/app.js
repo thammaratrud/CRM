@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-var myApp = angular.module('starter', ['ionic', 'LocalStorageModule', 'ngCordova','chart.js'])
+var myApp = angular.module('starter', ['ionic', 'LocalStorageModule', 'ngCordova'])
 
 myApp.run(function ($ionicPlatform) {
   $ionicPlatform.ready(function () {
@@ -22,13 +22,14 @@ myApp.run(function ($ionicPlatform) {
     }
   });
 })
+
   .constant('config', {
     serviceBase: 'https://cybercrm.herokuapp.com/'
     //https://thamapp.herokuapp.com/      for production
     //https://thamapptest.herokuapp.com/  for heroku test
     //http://localhost:3000/              for local
   })
-myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider,ChartJsProvider) {
+myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
   $stateProvider
     .state('home', {
       url: '/templates/home',
@@ -37,15 +38,14 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider,
     })
     .state('dash', {
       url: '/templates/dash',
-      templateUrl: 'templates/dash.html',
-      controller: 'dashController'
+      templateUrl: 'templates/dash.html'
 
     })
 
     .state('map', {
       url: '/templates/map',
       templateUrl: 'templates/map.html',
-      //  controller: 'mapController'
+       controller: 'mapController'
 
 
     })
@@ -82,6 +82,11 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider,
     .state('calendar', {
       url: '/templates/calendar/calendar',
       templateUrl: 'templates/calendar/calendar.html'
+
+    })
+    .state('calendar-info', {
+      url: '/templates/calendar/calendar-info',
+      templateUrl: 'templates/calendar/calendar-info.html'
 
     })
     .state('accounts', {
