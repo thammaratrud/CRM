@@ -3,7 +3,9 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
+
 var myApp = angular.module('starter', ['ionic', 'LocalStorageModule', 'ngCordova'])
+
 
 myApp.run(function ($ionicPlatform) {
   $ionicPlatform.ready(function () {
@@ -29,7 +31,9 @@ myApp.run(function ($ionicPlatform) {
     //https://thamapptest.herokuapp.com/  for heroku test
     //http://localhost:3000/              for local
   })
+
 myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider) {
+
   $stateProvider
     .state('home', {
       url: '/templates/home',
@@ -46,8 +50,7 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
     .state('map', {
       url: '/templates/map',
       templateUrl: 'templates/map.html',
-       controller: 'mapController'
-
+      controller: 'mapController'
 
     })
 
@@ -137,12 +140,26 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
     })
     .state('quotes', {
       url: '/templates/quotes/quotes',
-      templateUrl: 'templates/quotes/quotes.html'
+      templateUrl: 'templates/quotes/quotes.html',
+      controller: 'quotesController'
+
+    })
+    .state('quotesForm', {
+      url: '/templates/quotes/quotesForm',
+      templateUrl: 'templates/quotes/quotesForm.html',
+      controller: 'quotesController'
 
     })
     .state('orders', {
       url: '/templates/orders/orders',
-      templateUrl: 'templates/orders/orders.html'
+      templateUrl: 'templates/orders/orders.html',
+      controller: 'ordersController'
+
+    })
+    .state('ordersForm', {
+      url: '/templates/orders/ordersForm',
+      templateUrl: 'templates/orders/ordersForm.html',
+      controller: 'ordersController'
 
     })
     .state('invoices', {

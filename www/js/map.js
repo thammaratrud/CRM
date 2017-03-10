@@ -1,4 +1,5 @@
 'use strict';
+
 myApp.controller('mapController', ['$scope', '$cordovaGeolocation',
     function ($scope, $cordovaGeolocation) {
 
@@ -11,5 +12,6 @@ myApp.controller('mapController', ['$scope', '$cordovaGeolocation',
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
 
     }]);

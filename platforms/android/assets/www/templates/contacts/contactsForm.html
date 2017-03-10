@@ -1,0 +1,124 @@
+<ion-pane>
+    <ion-header-bar align-title="left" class="bar-positive">
+        <div class="buttons">
+            <a button class="button" href="#/templates/contacts/contacts">Back</button></a>
+        </div>
+        <h1 class="title">Contacts</h1>
+        <div class="buttons button-clear" >
+
+            <h1><a button class="button button-clear" ng-click="savecontacts()"><i></i>save</button></a></h1>
+            &nbsp &nbsp &nbsp
+            <a button class="button button-clear" ng-hide="true"><i class="ion-camera"></i></button></a>
+            <!--<a button class="button button-clear" ng-if="status === '2'"><i class="ion-camera22"></i></button></a>-->
+        </div>
+    </ion-header-bar>
+    <ion-content>
+    </ion-content>
+    <ion-tabs class=" tabs-positive tabs-icon-top">
+        <ion-tab title="Info" id=Info icon-on="icon-font-color ion-ios-home-outline" icon-off="ion-ios-home-outline">
+            <!-- Tab 1 content -->
+
+            <br>
+            <div class="row">
+                <div class="col col-10">
+                </div>
+
+                <div class="col col-10">
+                </div>
+            </div>
+
+            <div class="list " style="background-color: #f5f5f5;">
+
+<label class="item item-input item-select">
+    <div class="input-label" ng-model"datacontacts.customer">
+      <b>Customer</b>
+    </div>
+    <select>
+         <option value="" selected></option>
+      
+     
+    </select>
+  </label>
+<br>
+<a class="item item-input" style="color: red;">
+<b>Last Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.lastname">
+</a>
+
+<a class="item item-input">
+    <b>First Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.firstname">
+</a>
+<br>
+<a class="item item-input">
+    <b>Mobile Phone</b>&nbsp&nbsp&nbsp<input type="number" ng-model="datacontacts.mobilephone">
+</a>
+
+
+<a class="item item-input">
+    <b>Business Phone</b>&nbsp&nbsp&nbsp<input type="number" ng-model="datacontacts.businessphone">
+</a>
+
+<br>
+
+
+<a class="item item-input">
+    <b>E-mail</b>&nbsp&nbsp&nbsp<input type="email" ng-model="datacontacts.email">
+</a>
+
+<a class="item item-input">
+    <b>Fax</b>&nbsp&nbsp&nbsp<input type="number" ng-model="datacontacts.fax">
+</a>
+
+</div>
+
+
+</ion-tab>
+<ion-tab title="Address" id=Address icon-on="icon-font-color ion-ios-location-outline" icon-off="ion-ios-location-outline">Address
+    <!-- Tab 2 content -->
+    <br>
+    <div class="row">
+        <div class="col col-10">
+        </div>
+
+        <div class="col col-10">
+        </div>
+    </div>
+
+    <div class="list" style="background-color: #f5f5f5;">
+
+
+<a class="item item-input ">
+    <b>Street 1</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.street1">
+</a>
+
+
+
+
+<a class="item item-input">
+    <b>Street 2</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.street2">
+</a>
+
+<a class="item item-input">
+    <b>Street 3</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.street3">
+</a>
+<br>
+
+
+<a class="item item-input">
+    <b>City</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.city">
+</a>
+
+
+<a class="item item-input">
+    <b>Postal Code</b>&nbsp&nbsp&nbsp<input type="number" ng-model="datacontacts.postcode">
+</a>
+<br>
+<a class="item item-input">
+    <b>State</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.State">
+</a>
+<a class="item item-input">
+    <b>Country</b>&nbsp&nbsp&nbsp<input type="text" ng-model="datacontacts.country">
+</a>
+</div>
+</ion-tab>
+</ion-tabs>
+</ion-pane>
