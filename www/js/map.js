@@ -1,22 +1,15 @@
 'use strict';
-myApp.controller('mapController', ['$scope', '$cordovaGeolocation', '$timeout', '$window',
-    function ($scope, $cordovaGeolocation, $timeout, $window) {
-        var options = { timeout: 10000, enableHighAccuracy: true };
+myApp.controller('mapController', ['$scope', '$cordovaGeolocation',
+    function ($scope, $cordovaGeolocation) {
 
-        $cordovaGeolocation.getCurrentPosition(options).then(function (position) {
-
-            var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
-            var mapOptions = {
-                center: latLng,
-                zoom: 15,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-
-            $scope.map = new google.maps.Map(document.getElementById("map"), mapOptions);
-
-        }, function (error) {
-            console.log("Could not get location");
-        });
         $scope.map = map;
+        // var latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+
+        var mapOptions = {
+            center: new google.maps.LatLng(13.9339768, 100.7178051),
+            zoom: 15,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
     }]);

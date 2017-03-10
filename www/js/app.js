@@ -38,7 +38,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
     })
     .state('dash', {
       url: '/templates/dash',
-      templateUrl: 'templates/dash.html'
+      templateUrl: 'templates/dash.html',
+      controller: 'dashController'
 
     })
 

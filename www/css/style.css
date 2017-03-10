@@ -18,3 +18,11 @@
 .font-color-Account-Name {
     color:red;
 }
+
+.scroll {
+    height: 100%;
+}
+#map {
+    width: 100%;
+    height: 100%;
+}
