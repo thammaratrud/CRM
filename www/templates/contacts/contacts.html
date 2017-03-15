@@ -5,7 +5,7 @@
         </div>
         <h1 class="title">Contacts</h1>
         <div class="buttons button-clear">
-            <h1><a button class="button button-clear"   href="#/templates/map"><i class="ion-ios-location-outline"></i></button></a></h1>
+            <h1><a button class="button button-clear" href="#/templates/map"><i class="ion-ios-location-outline"></i></button></a></h1>
             &nbsp &nbsp &nbsp
             <a button class="button button-clear" href="#/templates/contacts/contactsForm.html"><i class="ion-ios-plus-empty"></i></button> </a>
         </div>
@@ -13,6 +13,26 @@
             <h1><a button class="button button-clear" href="#/templates/contacts/contactsForm.html"><i class="ion-ios-plus-empty"></i></button></a></h1>
         </div>-->
     </ion-header-bar>
-    <ion-content>
+    <ion-content ng-init="getContactList()">
+        <!--<div class="list">
+            <div ng-repeat="cont in con.phoneNumbers">
+                {{cont.value}}
+
+
+            </div>
+        </div>-->
+
+
+
+        <div class="list" ng-repeat="con in contacts">
+            <div ng-repeat="cont in con.phoneNumbers">
+                <a class="item item-icon-left item-icon-right" href="#">
+                     {{cont.value}}<br>{{con.displayName}}
+                    <i class="icon ion-ios-telephone-outline"></i>
+                </a>
+            </div>
+        </div>
+
+
     </ion-content>
 </ion-pane>

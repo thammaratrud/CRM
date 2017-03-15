@@ -3,7 +3,7 @@ myApp.controller('aboutController', ['$scope', '$cordovaSocialSharing',
     function ($scope, $cordovaSocialSharing) {
         $scope.shareAnywhere = function (message, image, link) {
             $cordovaSocialSharing.share(" ", message, image, link).then(function (result) {
-                 $cordovaSocialSharing.shareAnywhere(message, image, link);
+                $cordovaSocialSharing.shareAnywhere(message, image, link);
             }, function (error) {
                 alert("Cannot share on shareAnywhere");
             });
@@ -15,6 +15,10 @@ myApp.controller('aboutController', ['$scope', '$cordovaSocialSharing',
             }, function (error) {
                 alert("Cannot share on Twitter");
             });
+        }
+
+        $scope.message = function () {
+            alert('Tutorial comming soon!!!')
         }
 
     }])
