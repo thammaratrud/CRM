@@ -164,7 +164,14 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
     })
     .state('invoices', {
       url: '/templates/invoices/invoices',
-      templateUrl: 'templates/invoices/invoices.html'
+      templateUrl: 'templates/invoices/invoices.html',
+      controller:'invoicesController'
+
+    })
+    .state('invoicesForm', {
+      url: '/templates/invoices/invoicesForm',
+      templateUrl: 'templates/invoices/invoicesForm.html',
+      controller:'invoicesController'
 
     })
     .state('products', {
