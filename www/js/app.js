@@ -194,7 +194,8 @@ myApp.config(function ($stateProvider, $urlRouterProvider, $ionicConfigProvider)
     })
     .state('about', {
       url: '/templates/about',
-      templateUrl: 'templates/about.html'
+      templateUrl: 'templates/about.html',
+      controller: 'aboutController'
 
     })
 

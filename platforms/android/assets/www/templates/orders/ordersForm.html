@@ -3,7 +3,7 @@
         <div class="buttons">
             <a button class="button" href="#/templates/orders/orders">Back</button></a>
         </div>
-        <h1 class="title">Quote</h1>
+        <h1 class="title">Orders</h1>
         <div class="buttons">
             <a button class="button" ng-click="saveOrders()">Save</button></a> &nbsp &nbsp &nbsp
         </div>
@@ -14,7 +14,6 @@
     <ion-tabs class=" tabs-positive tabs-icon-top">
         <ion-tab title="Info" icon-on="icon-font-color ion-ios-home-outline" icon-off="ion-ios-home-outline">
             <!-- Tab 1 content -->
-
             <br>
             <div class="row">
                 <div class="col col-10">
@@ -23,58 +22,60 @@
                 <div class="col col-10">
                 </div>
             </div>
-
             <div class="list " style="background-color: #f5f5f5;">
-
                 <label class="item item-input item-select">
     <div class="input-label" >
       <b style="color: red;">Customer</b>
     </div>
-    <select ng-model"dataquotes.customer" required>
-         <option value="customertest" selected>customertest</option>
+    <select ng-model="dataOrders.customer" required>
+         <option value="1" selected>customertest</option>
+         <option value="2" >customertestfg</option>
     </select>
   </label>
                 <a class="item item-input " style="color: red;">
-                    <b>Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataOrders.topic" required>
+                    <b>Name</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataOrders.name" required>
                 </a>
                 <br>
                 <label class="item item-input item-select">
-    <div class="input-label" >
+    <div class="input-label">
       <b>Currency</b>
     </div>
-    <select>
-    </select ng-model"dataquotes.currency" required>
-         <option value="currency" selected>currency</option>
+    <select ng-model="dataOrders.currency">
+      <option value="1" selected>Baht</option>
+      <option value="2">US Dollar</option>
+      <option value="3">Dollar</option>
     </select>
   </label>
                 <label class="item item-input item-select">
-    <div class="input-label" >
-      <b style="color: red;">Price List</b>
+    <div class="input-label">
+      <b>Price List</b>
     </div>
-    <select >
-         <option value="" selected></option>
+    <select ng-model="dataOrders.pricelist">
+      <option value="" selected></option>
+      <option value="1">Retail</option>
+      <option value="2">Wholesale</option>
     </select>
   </label>
                 <br>
                 <a class="item item-input">
-                    <b>Total Amount</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataOrders.firstName">
+                    <b>Total Amount</b>&nbsp&nbsp&nbsp<input type="number" ng-model="dataOrders.totalamount">
                 </a>
                 <a class="item item-input">
-                    <b>Discount</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataOrders.email">
+                    <b>Discount</b>&nbsp&nbsp&nbsp<input type="number" ng-model="dataOrders.discount">
                 </a>
                 <a class="item item-input">
-                    <b>Discount %</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataOrders.mobilephone">
+                    <b>Discount %</b>&nbsp&nbsp&nbsp<input type="number" ng-model="dataOrders.discountpercen">
                 </a>
                 <br>
                 <a class="item item-input">
-                    <b>Freight</b>&nbsp&nbsp&nbsp<input type="text" ng-model="dataOrders.businessphone">
+                    <b>Freight</b>&nbsp&nbsp&nbsp<input type="number" ng-model="dataOrders.freight">
                 </a>
                 <label class="item item-input item-select">
-    <div class="input-label" ng-model"dataquotes.freightterms" required>
+    <div class="input-label" ng-model"dataOrders.freightterms" required>
       <b>Freight Terms</b>
     </div>
     <select>
-         <option value="" selected></option>
+         <option value="1" selected></option>
     </select>
   </label>
 
